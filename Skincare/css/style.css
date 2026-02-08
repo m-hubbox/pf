@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+body {
+    font-family: "Hiragino Kaku Gothic Pro", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic StdN", YuGothic, "Yu Gothic Medium", "YuGothic Medium", "Yu Gothic", Meiryo, sans-serif;
+}
+
+.wrap {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.q1-contents {
+    background-color: #eee6fb;
+    padding: 0 min(calc(30 / 750 * 100vw), 30px);
+}
+
+.q1-innner {
+    background-color: #fff;
+}
+
+.q1-innner h2 {
+    text-align: center;
+    padding: 0 min(calc(30 / 750 * 100vw), 30px);
+    letter-spacing: -0.05em;
+    line-height: 1.3;
+}
+
+.next-btn-area {
+    text-align: center;
+    padding-top: min(calc(30 / 750 * 100vw), 30px);
+    padding-bottom: min(calc(100 / 750 * 100vw), 100px);
+}
+
+.q1-btn,
+.q2-btn,
+.q3-btn {
+    pointer-events: none;
+}
+
+.next-btn-area img {
+    width: min(calc(500 / 750 * 100vw), 500px);
+}
+
+.q2-contents {
+    background-color: #eee6fb;
+    padding: 0 min(calc(30 / 750 * 100vw), 30px);
+}
+
+.q2-inner {
+    background-color: #fff;
+    padding: 0 min(calc(45 / 750 * 100vw), 45px);
+    
+}
+
+.q2-inner img {
+    text-align: center;
+    padding-top: min(calc(40 / 750 * 100vw), 40px);
+}
+
+.q2-txt-area h2 {
+    text-align: center;
+    line-height: 1.3;
+}
+
+.q2-about {
+    display: none;
+    text-align: center;
+    background-color: #fdeff4;
+    padding: min(calc(50 / 750 * 100vw), 50px);
+    font-size: min(calc(30 / 750 * 100vw), 30px);
+}
+
+.q2-about p {
+    margin-top: min(calc(40 / 750 * 100vw), 40px);
+    text-align: left;
+    line-height: 1.3;
+}
+
+.q3-contents {
+    background-color: #eee6fb;
+    padding: 0 min(calc(30 / 750 * 100vw), 30px);
+}
+
+.q3-innner {
+    background-color: #fff;
+    padding: 0 min(calc(40 / 750 * 100vw), 40px) min(calc(60 / 750 * 100vw), 60px);
+}
+
+.q3-innner img {
+    text-align: center;
+    padding-top: min(calc(40 / 750 * 100vw), 40px);
+}
+
+.q3-txt-area h2 {
+    text-align: center;
+    line-height: 1.3;
+}
+
+.checkbox-area {
+    text-align: center;
+}
+
+.checkbox-area p:first-child {
+    font-size: min(calc(30 / 750 * 100vw), 30px);
+    margin: min(calc(40 / 750 * 100vw), 40px) 0;
+}
+
+.checkbox-area p:nth-child(n + 2) {
+    font-size: min(calc(36 / 750 * 100vw), 36px);
+    text-align: left;
+    line-height: 1.2;
+}
+
+.checkbox-area p:nth-child(n + 3) {
+    margin-top: min(calc(50 / 750 * 100vw), 50px);
+}
+
+.result-contents {
+    position: relative;
+    text-align: center;
+}
+
+.cv-box {
+    position: relative;
+
+}
+
+.cv-box img {
+    width: min(calc(690 / 750 * 100vw), 690px);
+    margin-top: min(calc(-163 / 750 * 100vw), -163px);
+}
+
+.cv-btn {
+    position: absolute;
+    bottom: -2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.cv-btn img {
+    width: min(calc(604 / 750 * 100vw), 604px);
+}
+
+/* Footer
+---------------------------- */
+footer p {
+    font-size: min(calc(18 / 750 * 100vw), 18px);
+    text-align: center;
+    padding: min(calc(30 / 750 * 100vw), 30px) 0;
+}
+
+
+/* ラジオボタン 
+----------------------------*/
+.q-check-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.q-check-area span {
+    position: absolute;
+    left: 130%;
+    width: min(calc(500 / 750 * 100vw), 500px);
+    font-size: min(calc(40 / 750 * 100vw), 40px);
+}
+
+.q1-check-area {
+    padding-top: min(calc(60 / 750 * 100vw), 60px);
+    padding-bottom: min(calc(60 / 750 * 100vw), 60px);
+    padding-left: min(calc(70 / 750 * 100vw), 70px);
+}
+
+.q2-check-area {
+    padding-top: min(calc(30 / 750 * 100vw), 30px);
+    padding-bottom: min(calc(30 / 750 * 100vw), 30px);
+    padding-left: min(calc(20 / 750 * 100vw), 20px);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    position: relative;
+    margin: min(calc(10 / 750 * 100vw), 10px);
+    display: inline-block;
+    background-image: url("../images/no-check.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: min(calc(50 / 750 * 100vw), 50px);
+    height: min(calc(50 / 750 * 100vw), 50px);
+    flex-shrink: 0;
+}
+
+input[type="radio"]:checked+label {
+    background-image: url("../images/checked.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: min(calc(50 / 750 * 100vw), 50px);
+    height: min(calc(50 / 750 * 100vw), 50px);
+    flex-shrink: 0;
+}
+
+input[type="radio"]+label:nth-child(n + 3) {
+    margin-top: min(calc(40 / 750 * 100vw), 40px);
+}
+
+/* チェックボックス
+--------------------------- */
+.check-box {
+    cursor: pointer;
+}
+
+.check-text {
+    /* チェックボックスとテキストの上下を中央に */
+    align-items: center;
+    display: flex;
+}
+
+.check-box input {
+    display: none;
+    /* デフォルトのチェックボックスを非表示 */
+}
+
+.check-box input+.check-text::before {
+    /* チェック入れる前のチェックボックス画像 */
+    background-image: url("../images/no-check.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    width: min(calc(50 / 750 * 100vw), 50px);
+    height: min(calc(50 / 750 * 100vw), 50px);
+    position: relative;
+    margin-right: min(calc(10 / 750 * 100vw), 10px);
+    flex-shrink: 0;
+}
+
+.check-box input:checked+.check-text::before {
+    /* チェック入れた後のチェックボックス画像 */
+    background-image: url("../images/checked.png");
+}
+
+/* 汎用
+--------------------------- */
+.fz-44 {
+    font-size: min(calc(44 / 750 * 100vw), 44px);
+}
+
+.fc-p {
+    color: #ed5e94;
+}
+
+.fc-b {
+    color: #00479d;
+}
+
+.fw-6 {
+    font-weight: 600;
+}

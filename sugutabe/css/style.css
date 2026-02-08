@@ -1,0 +1,1715 @@
+@charset "UTF-8";
+
+body {
+    font-family: ヒラギノ明朝 ProN, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Hiragino Kaku Gothic StdN", YuGothic, "Yu Gothic Medium", "YuGothic Medium", "Yu Gothic", Meiryo, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: .7;
+}
+
+.inner-container {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+#wrap {
+    width: 100%;
+}
+
+#slider {
+    width: 100%;
+}
+
+.mv-area {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: min(calc(730 / 1140 * 100vw), 730px);
+}
+
+/* HRADER
+--------------------------------------- */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, .7);
+    display: flex;
+    justify-content: space-between;
+    padding: min(calc(10 / 1440 * 100vw), 10px) min(calc(190 / 1440 * 100vw), 190px);
+    align-items: center;
+}
+
+header img {
+    width: min(calc(200 / 1440 * 100vw), 200px);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li:nth-child(n + 2) {
+    margin-left: min(calc(40 / 1440 * 100vw), 40px);
+}
+
+nav li a {
+    color: #333333;
+    font-size: min(calc(14 / 1440 * 100vw), 14px);
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+nav li a::after {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #333;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+
+nav li a:hover::after {
+    transform: scale(1, 1);
+}
+
+.m-cart-box {
+    display: none;
+}
+
+/* MV
+-------------------------------------- */
+.mv-txt {
+    padding-top: min(calc(150 / 1440 * 100vw), 150px);
+    color: #eeeeee;
+    text-align: right;
+    padding-right: min(calc(190 / 1440 * 100vw), 190px);
+}
+
+.mv-txt p {
+    font-size: min(calc(30 / 1440 * 100vw), 30px);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.mv-txt h2 {
+    font-size: min(calc(60 / 1440 * 100vw), 60px);
+    margin-top: min(calc(39 / 1440 * 100vw), 39px);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.main-vege {
+    position: absolute;
+    top: -10vw;
+    left: 62vw;
+}
+
+.main-vege img {
+    width: min(calc(284 / 1440 * 100vw), 284px);
+}
+
+.mvtxt-sp {
+    display: none;
+}
+
+/* スグ食べとは
+---------------------------------- */
+
+.about {
+    position: relative;
+    text-align: center;
+    margin-top: min(calc(50 / 1440 * 100vw), 50px);
+}
+
+.about p {
+    font-size: min(calc(20 / 1440 * 100vw), 20px);
+    margin-top: min(calc(50 / 1440 * 100vw), 50px);
+    line-height: min(calc(40 / 1440 * 100vw), 40px);
+    text-align: left;
+    display: inline-block;
+}
+
+.about-title img {
+    vertical-align: middle;
+    width: min(calc(200 / 1440 * 100vw), 200px);
+}
+
+.about span {
+    vertical-align: middle;
+    margin-left: min(calc(10 / 1440 * 100vw), 10px);
+    font-size: min(calc(30 / 1440 * 100vw), 30px);
+}
+
+.about-title p {
+    font-size: min(calc(30 / 1440 * 100vw), 30px);
+    margin-left: min(calc(10 / 1440 * 100vw), 10px);
+}
+
+/* FVカートエリア
+----------------------------------------- */
+
+.fv-cart {
+    display: flex;
+    background-color: #ceb393;
+    justify-content: center;
+    align-items: center;
+    height: min(calc(105 / 1440 * 100vw), 105px);
+    margin-top: min(calc(50 / 1440 * 100vw), 50px);
+}
+
+.f-cart-txt {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.f-cart-txt p {
+    font-size: min(calc(16 / 1440 * 100vw), 16px);
+    line-height: 1.4;
+}
+
+.f-cart-txt span {
+    font-size: min(calc(24 / 1440 * 100vw), 24px);
+}
+
+.f-cart-txt p:nth-child(2) {
+    font-size: min(calc(54 / 1440 * 100vw), 54px);
+    margin-left: min(calc(5 / 1440 * 100vw), 5px);
+}
+
+.f-cart-btn a:hover {
+    opacity: .7;
+}
+
+.f-cart-btn a {
+    color: #fff;
+    border-radius: 35px;
+    line-height: 1;
+    font-size: min(calc(24 / 1440 * 100vw), 24px);
+    padding: min(calc(21 / 1440 * 100vw), 21px) min(calc(93 / 1440 * 100vw), 93px);
+    margin-left: min(calc(104 / 1440 * 100vw), 104px);
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.f-cart-btn.shiny a {
+    background: linear-gradient(-45deg, #EC540C 50%, #ffb787 60%, #EC540C 70%);
+    background-size: 600% 100%;
+    animation: shine 20s infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+/* #h-btn:active {
+    top: 2px;
+} */
+
+@keyframes shine {
+    0% {
+        background-position-x: 400%;
+    }
+
+    50% {
+        background-position-x: 0%;
+    }
+
+    100% {
+        background-position-x: -400%;
+    }
+}
+
+/* ３つの理由
+-------------------------------- */
+
+.reason {
+    position: relative;
+    color: #404040;
+}
+
+.reason img {
+    width: 100%;
+}
+
+.reason-title {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+
+.reason-title h2 {
+    font-size: min(calc(48 / 1440 * 100vw), 48px);
+    font-weight: 100;
+
+}
+
+.point p {
+    font-size: min(calc(24 / 1440 * 100vw), 24px);
+    text-align: center;
+    border-bottom: dashed 2px #afafaf;
+    padding-bottom: 5px;
+}
+
+.point p:nth-child(3) {
+    margin-top: min(calc(39 / 1440 * 100vw), 39px);
+    font-size: min(calc(20 / 1440 * 100vw), 20px);
+    text-align: left;
+    border-bottom: none;
+    line-height: 1.5;
+}
+
+.point span {
+    font-size: min(calc(48 / 1440 * 100vw), 48px);
+    margin-left: min(calc(10 / 1440 * 100vw), 10px);
+    padding-top: .4em;
+    background-position: top left 0;
+    background-repeat: repeat-x;
+    background-size: 1em .3em;
+    background-image: radial-gradient(.08em .08em at center center, #505050, #505050 100%, transparent);
+}
+
+.point img {
+    margin-top: min(calc(23 / 1440 * 100vw), 23px);
+}
+
+.point1 {
+    width: min(calc(400 / 1440 * 100vw), 400px);
+    position: absolute;
+    top: 19%;
+    left: 58.5%;
+}
+
+.point2 {
+    width: min(calc(400 / 1440 * 100vw), 400px);
+    position: absolute;
+    top: 37.5%;
+    left: 15%;
+}
+
+.point3 {
+    width: min(calc(400 / 1440 * 100vw), 400px);
+    position: absolute;
+    top: 64%;
+    left: 52%;
+}
+
+.point3 span {
+    margin: 0 min(calc(2 / 1440 * 100vw), 2px);
+}
+
+.vege {
+    display: none;
+}
+
+.point-number {
+    display: none;
+}
+
+.reason-txt {
+    display: none;
+}
+
+/* １回限りお試しセット
+---------------------------------- */
+
+.trial {
+    background-image: url(../images/trial_bg.png);
+    height: min(calc(1100 / 1440 * 100vw), 1100px);
+    padding-top: min(calc(100 / 1440 * 100vw), 100px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.trial-title {
+
+    text-align: center;
+}
+
+.trial-title p {
+    font-size: min(calc(24 / 1440 * 100vw), 24px);
+}
+
+.trial-title h2 {
+    font-size: min(calc(48 / 1440 * 100vw), 48px);
+    font-weight: 100;
+    margin-top: min(calc(26 / 1440 * 100vw), 26px);
+}
+
+.t-cart-img img {
+    width: min(calc(400 / 1440 * 100vw), 400px);
+}
+
+.t-cart-area {
+    margin: min(calc(50 / 1440 * 100vw), 50px) auto 0;
+    background-color: #fff;
+    padding: min(calc(30 / 1440 * 100vw), 30px) min(calc(60 / 1440 * 100vw), 60px);
+}
+
+.t-cart-inner {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #c1a961;
+    padding: min(calc(30 / 1440 * 100vw), 30px);
+}
+
+.t-cart-txt p:first-child {
+    font-size: min(calc(18 / 1440 * 100vw), 18px);
+    background: linear-gradient(transparent 70%, #ebbf3c 70%);
+    display: inline;
+}
+
+.t-cart-txt p:nth-child(2) {
+    font-size: min(calc(27 / 1440 * 100vw), 27px);
+    margin-top: min(calc(15 / 1440 * 100vw), 15px);
+}
+
+.t-cart-txt p:nth-child(3) {
+    font-size: min(calc(30 / 1440 * 100vw), 30px);
+    margin-top: min(calc(27 / 1440 * 100vw), 27px);
+
+}
+
+.t-cart-txt span {
+    font-size: min(calc(18 / 1440 * 100vw), 18px);
+}
+
+.t-cart-txt p:nth-child(4) {
+    font-size: min(calc(18 / 1440 * 100vw), 18px);
+    margin-top: min(calc(27 / 1440 * 100vw), 27px);
+}
+
+.t-cart-btn {
+    margin-top: min(calc(55 / 1440 * 100vw), 55px);
+}
+
+.t-cart-btn a {
+    color: #fff;
+    border-radius: 35px;
+    line-height: 1;
+    font-size: min(calc(24 / 1440 * 100vw), 24px);
+    padding: min(calc(21 / 1440 * 100vw), 21px) min(calc(93 / 1440 * 100vw), 93px);
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.t-cart-btn.shiny a {
+    background: linear-gradient(-45deg, #EC540C 50%, #ffb787 60%, #EC540C 70%);
+    background-size: 600% 100%;
+    animation: shine 20s infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+.t-cart-btn a:hover {
+    opacity: .7;
+}
+
+.ribbon {
+    display: inline-block;
+    position: absolute;
+    padding: min(calc(8 / 1440 * 100vw), 8px) 0;
+    left: -11%;
+    top: 10%;
+    width: min(calc(245 / 1440 * 100vw), 245px);
+    text-align: center;
+    font-size: min(calc(20 / 1440 * 100vw), 20px);
+    background: #ebbf3c;
+    color: #333;
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+
+.label_inner {
+    position: absolute;
+    top: -2.2%;
+    left: -0.6%;
+    width: min(calc(225 / 1440 * 100vw), 225px);
+    height: min(calc(91 / 1440 * 100vw), 91px);
+    overflow: hidden;
+}
+
+.ribbon:before,
+.ribbon:after {
+    position: absolute;
+    content: "";
+    border-top: min(calc(4 / 1440 * 100vw), 4px) solid #a38429;
+    border-left: min(calc(4 / 1440 * 100vw), 4px) solid transparent;
+    border-right: min(calc(5 / 1440 * 100vw), 5px) solid transparent;
+    bottom: -10%;
+}
+
+.ribbon:before {
+    left: 5%;
+}
+
+.ribbon:after {
+    right: 0%;
+}
+
+.trial-txt {
+    display: none;
+}
+
+/* こんな農家さんが登録しています
+---------------------------------- */
+.farmer {
+    background-image: url(../images/farmer_bg.jpg);
+    height: auto;
+    padding-top: min(calc(100 / 1440 * 100vw), 100px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.farmer-title {
+    text-align: center;
+}
+
+.farmer-title p {
+    font-size: min(calc(24 / 1440 * 100vw), 24px);
+}
+
+.farmer-title h2 {
+    font-size: min(calc(48 / 1440 * 100vw), 48px);
+    font-weight: 100;
+    margin-top: min(calc(20 / 1440 * 100vw), 20px);
+}
+
+.farmer-inner {
+    position: relative;
+    margin-top: min(calc(50 / 1440 * 100vw), 50px);
+}
+
+.farmer-inner ul {
+    max-width: min(calc(1200 / 1440 * 100vw), 1200px);
+    margin: 0 auto;
+}
+
+.farmer-inner ul li {
+    display: flex;
+    align-items: center;
+}
+
+.farmer-inner ul li .photo img {
+    width: min(calc(415 / 1440 * 100vw), 415px);
+}
+
+.farmer-inner ul li:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.farmer-inner ul li:nth-child(odd) .photo {
+    margin-left: min(calc(150 / 1440 * 100vw), 150px);
+}
+
+.farmer-inner ul li:nth-child(even) .photo {
+    margin-right: min(calc(150 / 1440 * 100vw), 150px);
+    margin-top: min(calc(90 / 1440 * 100vw), 90px);
+}
+
+.farmer-inner ul li:nth-child(odd) .farmer-inner-p {
+    margin-left: min(calc(85 / 1440 * 100vw), 85px);
+    margin-top: min(calc(100 / 1440 * 100vw), 100px);
+}
+
+.farmer-inner ul li:nth-child(even) .farmer-inner-p {
+    margin-right: min(calc(85 / 1440 * 100vw), 85px);
+    margin-top: min(calc(180 / 1440 * 100vw), 180px);
+    text-align: right;
+}
+
+.farmer-inner ul li:nth-child(even) .farmer-inner-p p:nth-child(2) {
+    text-align: left;
+}
+
+.farmer-inner-p {
+    font-size: min(calc(24 / 1440 * 100vw), 24px);
+    flex-direction: column;
+    width: min(calc(500 / 1440 * 100vw), 500px);
+}
+
+.farmer-inner-p p:first-child {
+    border-bottom: dashed 2px #afafaf;
+    display: inline;
+    padding-bottom: min(calc(10 / 1440 * 100vw), 10px);
+}
+
+.farmer-inner-p span {
+    font-size: min(calc(16 / 1440 * 100vw), 16px);
+}
+
+.farmer-inner-p p:nth-child(2) {
+    margin-top: min(calc(30 / 1440 * 100vw), 30px);
+    font-size: min(calc(16 / 1440 * 100vw), 16px);
+}
+
+.catch-wraper p {
+    padding: min(calc(25 / 1440 * 100vw), 25px);
+    background-color: #fff;
+    font-size: min(calc(30 / 1440 * 100vw), 30px);
+}
+
+.catch-wraper p span {
+    font-size: min(calc(18 / 1440 * 100vw), 18px);
+}
+
+.catch-txt01 {
+    position: absolute;
+    display: inline-block;
+    top: 7%;
+    left: 45.2%;
+}
+
+.catch-txt02 {
+    position: absolute;
+    display: inline-block;
+    top: 62%;
+    left: 31.5%;
+}
+
+.farmer-txt {
+    display: none;
+}
+
+/* おかげさまで感謝のお声をいただいています
+--------------------------------------- */
+.customer {
+    background-image: url(../images/customer_bg.jpg);
+    height: auto;
+    padding-top: min(calc(170 / 1440 * 100vw), 170px);
+    padding-bottom: min(calc(20 / 1440 * 100vw), 20px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.customer-txt {
+    text-align: center;
+}
+
+.customer-txt p {
+    font-size: min(calc(24 / 1440 * 100vw), 24px);
+}
+
+.customer-txt h2 {
+    font-size: min(calc(48 / 1440 * 100vw), 48px);
+    font-weight: 100;
+    margin-top: min(calc(20 / 1440 * 100vw), 20px);
+}
+
+.customer-img-txt {
+    display: none;
+}
+
+
+/*スライダー */
+.silde-area {
+    width: min(calc(1000 / 1440 * 100vw), 1000px);
+    margin: min(calc(50 / 1440 * 100vw), 50px) auto;
+}
+
+.slide-area-sp {
+    display: none;
+}
+
+.slide-items {
+    width: 100%;
+}
+
+.slide-items img {
+    width: min(calc(893 / 1440 * 100vw), 893px);
+    margin: 0 auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-dots li button:before {
+    font-size: min(calc(10 / 1440 * 100vw), 10px);
+    top: 2%;
+    margin-top: min(calc(30 / 1440 * 100vw), 30px);
+}
+
+.slick-prev {
+    left: -50px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 39px;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #808080;
+}
+
+/* よくある質問
+------------------------------------------- */
+
+.question {
+    background-image: url(../images/question_bg.jpg);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    padding-bottom: min(calc(100 / 1440 * 100vw), 100px);
+}
+
+.quwstion-title {
+    padding-top: min(calc(100 / 1440 * 100vw), 100px);
+}
+
+.quwstion-title h2 {
+    text-align: center;
+    font-size: min(calc(48 / 1440 * 100vw), 48px);
+    font-weight: min(calc(100 / 1440 * 100vw), 100px);
+    font-weight: 100;
+}
+
+.question-img-txt {
+    display: none;
+}
+
+/* アコーディオン */
+.accordion {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: min(calc(30 / 1440 * 100vw), 30px);
+    max-width: min(calc(893 / 1440 * 100vw), 893px);
+    position: relative;
+    width: 100%;
+}
+
+.accordion-title {
+    color: #333;
+    cursor: pointer;
+    font-size: min(calc(16 / 1440 * 100vw), 16px);
+    padding: min(calc(20 / 1440 * 100vw), 20px) min(calc(30 / 1440 * 100vw), 30px);
+}
+
+.accordion-content {
+    display: none;
+    padding: min(calc(20 / 1440 * 100vw), 20px) min(calc(60 / 1440 * 100vw), 60px);
+}
+
+.accordion-content p {
+    font-size: min(calc(18 / 1440 * 100vw), 18px);
+    line-height: 1.8;
+}
+
+.accordion-item .accordion-title {
+    background-color: #e8dbce;
+}
+
+.accordion-item:nth-of-type(2) {
+    margin-top: min(calc(3 / 1440 * 100vw), 3px);
+}
+
+/* 矢印 */
+.accordion-title {
+    position: relative;
+}
+
+.accordion-title::after {
+    border-right: solid min(calc(2 / 1440 * 100vw), 2px) #585654;
+    border-top: solid min(calc(2 / 1440 * 100vw), 2px) #585654;
+    content: "";
+    display: block;
+    height: min(calc(8 / 1440 * 100vw), 8px);
+    position: absolute;
+    right: min(calc(25 / 1440 * 100vw), 25px);
+    top: 38%;
+    transform: rotate(135deg);
+    transition: transform .3s ease-in-out, top .3s ease-in-out;
+    width: min(calc(8 / 1440 * 100vw), 8px);
+}
+
+.accordion-title.open::after {
+    top: 45%;
+    transform: rotate(-45deg);
+}
+
+/* .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: black;
+} */
+
+/* FOOTER
+---------------------------- */
+footer p {
+    text-align: center;
+    padding: min(calc(50 / 1440 * 100vw), 50px) 0 min(calc(30 / 1440 * 100vw), 30px);
+    background-color: #ebe0bf;
+    font-size: min(calc(12 / 1440 * 100vw), 12px);
+}
+
+/* フェードイン
+---------------------------- */
+.js-fade {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: opacity 1s, visibility 1s, transform 1s;
+}
+
+.scroll {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.js-fade2 {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 0%);
+    transition: opacity 1s, visibility 1s, transform 1s;
+}
+
+.scroll2 {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%);
+}
+
+
+/* SPここから
+--------------------------------------------------------------------*/
+
+/* 950px以上はハンバーガーボタン非表示、ヘッダー固定 */
+@media screen and (min-width:950px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    /* HEADER SP
+    ------------------------------------------- */
+
+    header {
+        padding: 15px;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    /* button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        vertical-align: middle;
+        border: 0;
+        background: transparent;
+        outline: 0;
+        border-radius: 0;
+        text-align: inherit;
+    } */
+
+    #h-btn {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        vertical-align: middle;
+        border: 0;
+        background: transparent;
+        outline: 0;
+        border-radius: 0;
+        text-align: inherit;
+    }
+
+    /* button:hover {
+        cursor: pointer;
+    } */
+
+    #h-btn:hover {
+        cursor: pointer;
+    }
+
+    /**************** 以下、ハンバーガーボタンのスタイリング ****************/
+    .menu-button {
+        /* ボタンの配置位置  */
+        position: fixed;
+        /* top: 2.5%; */
+        right: 16px;
+        /* ボタンの大きさ  */
+        width: 58px;
+        height: 48px;
+        /* バーガーの線をボタン範囲の中心に配置 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 最前面に */
+        z-index: 10;
+    }
+
+    /***** 真ん中のバーガー線 *****/
+    .btn-line {
+        /* 線の長さと高さ */
+        width: 90%;
+        height: 4px;
+        /* バーガー線の色 */
+        background-color: #333;
+        /* バーガー線の位置基準として設定 */
+        position: relative;
+        transition: .2s;
+    }
+
+    /***** 上下のバーガー線 *****/
+    .btn-line::before,
+    .btn-line::after {
+        content: "";
+        /* 基準線と同じ大きさと色 */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        transition: .2s;
+    }
+
+
+    .btn-line::before {
+        /* 上の線の位置 */
+        transform: translateY(-300%);
+    }
+
+
+    .btn-line::after {
+        /* 下の線の位置 */
+        transform: translateY(300%);
+    }
+
+    /***** メニューオープン時 *****/
+    .btn-line.open {
+        /* 真ん中の線を透明に */
+        background-color: transparent;
+    }
+
+    .btn-line.open::before,
+    .btn-line.open::after {
+        content: "";
+        transition: .2s;
+    }
+
+    .btn-line.open::before {
+        /* 上の線を傾ける */
+        transform: rotate(45deg);
+    }
+
+    .btn-line.open::after {
+        /* 上の線を傾ける */
+        transform: rotate(-45deg);
+    }
+
+    /**************** ここまで、ハンバーガーボタンのスタイリング ****************/
+
+    /**************** 以下、メニューのスタイリング ****************/
+
+    .menu {
+        position: fixed;
+        /* メニューの位置マイナス指定で画面外に */
+        transform: translateX(-241%);
+        width: 70%;
+        height: 100vh;
+        /* メニューを縦に */
+        display: flex;
+        flex-direction: column;
+        color: #efefef;
+        background: rgb(202, 186, 139);
+        transition: transform .3s;
+        top: 0;
+    }
+
+    .menu-list {
+        width: 100%;
+        /* メニューテキスト位置をリスト内中心に */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-list:first-child {
+        margin-top: 100px;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav li:nth-child(n + 2) {
+        margin-left: 0;
+    }
+
+    nav li a {
+        font-size: 18px;
+        font-weight: 100;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    nav li .menu-anchor::after {
+        content: '';
+        position: absolute;
+        background-color: #333;
+        width: 20px;
+        height: 1px;
+        display: inline-block;
+        bottom: -10px;
+        left: calc(50% - 10px);
+    }
+
+    nav li a:hover {
+        opacity: .7;
+
+    }
+
+    .m-cart-box {
+        display: block;
+        color: #333;
+        background-color: #fff;
+        padding: 10px;
+        margin: 30px auto 0;
+        width: calc(500 / 623 * 100%);
+    }
+
+    .m-cart-inner {
+        border: 1px solid #c1a961;
+        text-align: center;
+    }
+
+    .m-cart-txt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 5px;
+    }
+
+    .m-cart-txt p {
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 600;
+    }
+
+    .m-cart-txt p:nth-child(2) {
+        margin-left: 10px;
+    }
+
+    .m-cart-txt p span {
+        font-size: 24px;
+    }
+
+    .m-cart-btn a {
+        color: #fff;
+        font-size: 18px;
+        background: linear-gradient(to right, #f76300, #c31026);
+        border-radius: 35px;
+        padding: 10px 20px;
+        box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.2);
+        margin: 10px 0;
+    }
+
+    /***** メニューオープン時位置0にして画面内に *****/
+    .menu.open {
+        transform: translateX(-141%);
+        top: 0;
+    }
+
+    /* MV SP
+-------------------------------- */
+
+    .mv-area {
+        height: 730px;
+    }
+
+    .mv-txt {
+        padding-top: 170px;
+        padding-right: 20px;
+
+    }
+
+    .mv-txt p {
+        font-size: 18px;
+    }
+
+    .mv-txt h2 {
+        line-height: 1.4;
+        font-size: 32px;
+    }
+
+    .mvtxt-sp {
+        display: block;
+    }
+
+    .main-vege {
+        position: absolute;
+        top: -12vw;
+        left: 77vw;
+    }
+
+    /* スグ食べとは SP
+----------------------------------- */
+
+    .about-title img {
+        width: 150px;
+    }
+
+    .about p {
+        font-size: 16px;
+        line-height: 2;
+        margin-bottom: 35px;
+        padding: 0 20px;
+    }
+
+
+    /* FVカートエリア SP
+----------------------------------------- */
+    .fv-cart {
+        height: 90px;
+        margin-top: 0;
+    }
+
+    .f-cart-txt p {
+        font-size: 15px;
+    }
+
+    .f-cart-txt span {
+        font-size: 15px;
+    }
+
+    .f-cart-txt p:nth-child(2) {
+        font-size: 30px;
+        margin-left: 6px;
+    }
+
+    .f-cart-btn a {
+        font-size: 18px;
+        padding: 20px 15px;
+        margin-left: 15px;
+    }
+
+    /* ３つの理由 SP
+-------------------------------- */
+    .reason {
+        height: 1600px;
+        background-color: #e8dbce;
+        position: relative;
+    }
+
+    .reason-bg {
+        display: none;
+    }
+
+    .reason-title {
+        top: 3%;
+        width: 360px;
+        z-index: 99;
+    }
+
+    .reason-title h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .point1-sp {
+        background-color: rgba(221, 213, 191, .6);
+        border-radius: 10px;
+        min-width: 390px;
+        height: 460px;
+        padding: 70px 25px;
+    }
+
+    .point2-sp {
+        background-color: rgba(193, 169, 97, .2);
+        border-radius: 10px;
+        min-width: 390px;
+        height: 460px;
+        padding: 70px 25px;
+    }
+
+    .point3-sp {
+        background-color: rgba(211, 209, 178, .8);
+        border-radius: 10px;
+        min-width: 390px;
+        height: 460px;
+        padding: 70px 25px;
+    }
+
+    .point {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .point p {
+        font-size: 18px;
+        display: inline;
+    }
+
+    .point p:nth-child(3) {
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .point span {
+        font-size: 28px;
+    }
+
+    .point img {
+        margin-top: 20px;
+    }
+
+    .point1 {
+        position: absolute;
+        top: 18%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+        z-index: 99;
+    }
+
+    .point2 {
+        position: absolute;
+        top: 49%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .point3 {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    .point-number {
+        display: block;
+    }
+
+    .p-num1 {
+        position: absolute;
+        top: 0;
+        left: 10%;
+        z-index: 1;
+    }
+
+    .p-num2 {
+        position: absolute;
+        top: 0.5%;
+        left: 10%;
+        z-index: 1;
+    }
+
+    .p-num3 {
+        position: absolute;
+        top: 0.5%;
+        left: 10%;
+        z-index: 1;
+    }
+
+    .point-number img {
+        width: 100px;
+    }
+
+    .vege {
+        display: block;
+    }
+
+    .vege img {
+        width: 200px;
+    }
+
+    .vege1 {
+        position: absolute;
+        top: 6%;
+    }
+
+    .vege2 {
+        position: absolute;
+        top: 29%;
+        right: 0;
+    }
+
+    .vege3 {
+        position: absolute;
+        top: 57%;
+        left: 0;
+    }
+
+    .reason-txt {
+        display: block;
+    }
+
+    .r-txt {
+        position: absolute;
+        top: 1%;
+        left: 51%;
+        z-index: 1;
+    }
+
+    .reason-txt img {
+        width: 180px;
+    }
+
+    /* ３つの理由 SPフェードイン 調整 */
+    .js-fade-sp {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-50%, -30%);
+        transition: opacity 1s, visibility 1s, transform 1s;
+    }
+
+    .scroll-sp {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%);
+    }
+
+    /* １回限りお試しセット SP
+---------------------------------- */
+
+    .trial {
+        position: relative;
+        height: 90%;
+    }
+
+    .t-cart-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trial-title {
+        position: relative;
+        z-index: 99;
+    }
+
+    .trial-title p {
+        font-size: 15px;
+    }
+
+    .trial-title h2 {
+        font-size: 22px;
+    }
+
+    .t-cart-txt p:first-child {
+        font-size: 18px;
+    }
+
+    .t-cart-img {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .t-cart-img img {
+        width: 250px;
+    }
+
+    .t-cart-area {
+        max-width: 500px;
+        margin: 50px auto;
+    }
+
+    .t-cart-txt p:nth-child(2) {
+        font-size: 21px;
+        margin-top: 15px;
+    }
+
+    .t-cart-txt p:nth-child(3) {
+        text-align: center;
+        font-size: 35px;
+        margin-top: 30px;
+    }
+
+    .t-cart-txt span {
+        font-size: 16px;
+    }
+
+    .t-cart-txt p:nth-child(4) {
+        text-align: center;
+        font-size: 16px;
+        padding-bottom: 30px;
+        margin-top: 20px;
+    }
+
+    .t-cart-btn {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .t-cart-btn a {
+        padding: 20px 50px;
+        font-size: 20px;
+    }
+
+    .trial-txt {
+        display: block;
+    }
+
+    .trial-txt img {
+        width: 160px;
+    }
+
+    .t-txt {
+        position: absolute;
+        top: 1%;
+        left: 56%;
+        z-index: 98;
+    }
+
+    .ribbon {
+        display: inline-block;
+        position: absolute;
+        padding: 8px 0;
+        left: -13%;
+        top: 12%;
+        width: 245px;
+        text-align: center;
+        font-size: 20px;
+        background: #ebbf3c;
+        color: #333;
+        -webkit-transform: rotate(-20deg);
+        transform: rotate(-20deg);
+    }
+
+    .label_inner {
+        position: absolute;
+        top: -2.2%;
+        left: -1.7%;
+        width: 225px;
+        height: 91px;
+        overflow: hidden;
+    }
+
+    .ribbon:before,
+    .ribbon:after {
+        position: absolute;
+        content: "";
+        border-top: 4px solid #a38429;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        bottom: -10%;
+    }
+
+    .ribbon:before {
+        left: 5%;
+    }
+
+    .ribbon:after {
+        right: 0%;
+    }
+
+    /* こんな農家さんが登録しています SP
+---------------------------------- */
+
+    .farmer {
+        background-image: none;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .farmer-title {
+        position: relative;
+        z-index: 99;
+
+    }
+
+    .farmer-title p {
+        font-size: 15px;
+    }
+
+    .farmer-title h2 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .farmer-inner {
+        position: relative;
+    }
+
+    .farmer-inner-p {
+        text-align: left;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .farmer-inner-p p:nth-child(2) {
+        font-size: 17px;
+        margin-top: 24px;
+        line-height: 1.5;
+    }
+
+    .farmer-inner-p span {
+        font-size: 14px;
+    }
+
+    .farmer-inner ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .farmer-inner ul li .photo img {
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .farmer-inner ul li:nth-child(odd) .photo {
+        margin-left: 0;
+    }
+
+    .farmer-inner ul li:nth-child(even) .photo {
+        margin: 0;
+    }
+
+    .farmer-inner ul li:nth-child(odd) .farmer-inner-p {
+        margin: 45px 0 120px;
+    }
+
+    .farmer-inner ul li:nth-child(even) .farmer-inner-p {
+        margin: 55px 0;
+    }
+
+    .catch-txt01 {
+        position: absolute;
+        display: block;
+        top: 24.5%;
+        left: 1%;
+    }
+
+    .catch-wraper p {
+        font-size: 22px;
+        padding: 10px;
+    }
+
+    .catch-wraper p span {
+        font-size: 16px;
+    }
+
+    .catch-txt02 {
+        position: absolute;
+        display: block;
+        top: 79.5%;
+        left: 1%;
+    }
+
+    .farmer-txt {
+        display: block;
+    }
+
+    .farmer-txt img {
+        width: 170px;
+    }
+
+    .f-txt {
+        position: absolute;
+        top: 2%;
+        left: 54%;
+        z-index: 98;
+    }
+
+
+    /* おかげさまで感謝のお声をいただいています SP
+--------------------------------------- */
+
+    .customer {
+        position: relative;
+        background-image: none;
+        background-color: #f8f8f8;
+        padding-top: 40px;
+    }
+
+    .customer-txt {
+        position: relative;
+        z-index: 99;
+    }
+
+    .customer-txt p {
+        font-size: 15px;
+    }
+
+    .customer-txt h2 {
+        font-size: 25px;
+        margin-top: 20px;
+    }
+
+    .customer-img-txt {
+        display: block;
+    }
+
+    .customer-img-txt img {
+        width: 190px;
+    }
+
+    .c-txt {
+        position: absolute;
+        top: 2%;
+        left: 48%;
+        z-index: 98;
+    }
+
+    /*スライダー SP*/
+    .silde-area {
+        display: none;
+    }
+
+    .slide-area-sp {
+        display: block;
+        margin-top: 50px;
+
+    }
+
+    .silde-area {
+        width: 100%;
+    }
+
+    .slide-items img {
+        width: 100%;
+    }
+
+    .slide-txt {
+        text-align: center;
+        background-color: #fff;
+        padding-bottom: 20px;
+    }
+
+    .slide-txt h2 {
+        font-weight: 100;
+        position: relative;
+        padding: 3rem 0 1.5rem;
+        border-bottom: 1px solid #333;
+        background-color: white;
+        color: #333;
+        font-size: 26px;
+    }
+
+    .slide-txt h2:before {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) skew(25deg);
+        height: 20px;
+        width: 10px;
+        border-left: 1px solid #333;
+        background-color: white;
+        content: "";
+    }
+
+    .slide-txt p {
+        text-align: left;
+        line-height: 1.5;
+        margin: 20px;
+    }
+
+    .slide-txt p:nth-child(2) {
+        color: #966043;
+    }
+
+    /* よくある質問 SP
+------------------------------------------- */
+
+    .question {
+        position: relative;
+        background-image: none;
+        background-color: #f8f8f8;
+        padding-bottom: 30px;
+    }
+
+    .quwstion-title {
+        position: relative;
+        z-index: 99;
+    }
+
+    .question-img-txt {
+        display: block;
+    }
+
+    .question-img-txt img {
+        width: 180px;
+    }
+
+    .q-txt {
+        position: absolute;
+        top: 1%;
+        left: 48%;
+        z-index: 97;
+    }
+
+    /* アコーディオン */
+    .accordion {
+        max-width: 100%;
+        position: relative;
+        z-index: 98;
+    }
+
+    .accordion-title {
+        font-size: 15px;
+        font-weight: 200;
+    }
+
+    .accordion-content p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 10px 0;
+        font-weight: 100;
+    }
+
+    .accordion-item:nth-of-type(2) {
+        margin-top: 3px;
+    }
+
+    /* 矢印 */
+    .accordion-title::after {
+        border-right: solid 3px #585654;
+        border-top: solid 3px #585654;
+        content: "";
+        display: block;
+        height: 8px;
+        position: absolute;
+        right: 25px;
+        top: 19%;
+        transform: rotate(135deg);
+        transition: transform .3s ease-in-out, top .3s ease-in-out;
+        width: 8px;
+    }
+
+
+    /* FOOTER
+---------------------------- */
+    footer p {
+        text-align: center;
+        padding-bottom: 30px;
+        font-size: 15px;
+    }
+
+}
